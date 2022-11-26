@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    background-color: #eee;
+}
+
+table.fixedtable {
+    table-layout: fixed;
+    border-spacing: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content {
+    margin: 0 1em 3em 1em;
+}
+#optionsdiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.firstoptioncheckbox {
+}
+.optioncheckbox {
+    margin-left: 3em;
+}
+.topaxis {
+    border-bottom: thin solid black;
+}
+
+.rightaxis {
+    border-left: thin solid black;
+}
+
+.lastrow {
+    border-top: thin solid black;
+}
+
+#gamelist table {
+}
+#gamelist table tr td {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+table.fixedtable th, table.fixedtable td, td.fixedtd {
+    min-width: 25px;
+    width: 25px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+
+    -webkit-touch-callout: none; /* iOS Safari */       
+    -webkit-user-select: none; /* Safari */     
+    -khtml-user-select: none; /* Konqueror HTML */      
+    -moz-user-select: none; /* Firefox */       
+    -ms-user-select: none; /* Internet Explorer/Edge */     
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.hover.over {
+    background-color: rgba(187, 187, 187, 0.60);
+}
+
+th.adjhover {
+    background-color: green;
+    color: white;
+}
+
+.hover.adjhover {
+    background-color: rgba(187, 187, 187, 0.30); 
+}
+
+.hover.selected {
+    box-shadow: 0px 0px 0px 3px magenta inset;
+}
+
+#legend {
+    padding-top: 2em;
+    float: right;
+}
+.count {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.count, .hover {
+    width: 100%;
+    height: 100%;
+}
+
+td.axisLabel{
+    font-size: 13px;
+    text-align: center;
+    font-weight: bold;
+}
+
+td#vAxisLabel{
+    padding-top: 12px;
+}
+
+.vertical{
+    white-space: nowrap;
+    writing-mode: tb-rl;
+}
+
+#lastupdated {
+    font-size: 12px;
+    padding: 0 0 20 10;
+    background-color: #BBBBBB;
+    margin-top: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 15px;
+}
+
+.black {
+    background-color: black; color: white;
+}
+.none {
+    background-color: #eee;
+}
+.single {
+    background-color: lightblue;
+    color: white;
+}
+.div2 {
+    background-color: blue;
+    color: white;
+}
+.div3 {
+    background-color: green;
+}
+.div4 {
+    background-color: yellow;
+}
+.div5 {
+    background-color: orange;
+}
+.div6 {
+    background-color: pink;
+}
+.lots {
+    background-color: red;
+    color: white;
+}
+
+#infoBox{
+    background-color: #BBBBBB;
+    position: absolute;
+    font-size: 10px;
+    padding: 4px;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+#infoBoxScore{
+    font-size: 12px;
+    font-weight: bold;
+}
+#infoBoxClose{
+    font-size: 9px;
+    float: right;
+    cursor: pointer;
+}
+.hidden{
+    display: none;
+}

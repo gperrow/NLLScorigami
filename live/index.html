@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>NLL Scorigami</title>
+    <link rel="shortcut icon" type="image/png" href="/img/laxfavicon.png"/>
+    <script src="/jquery/jquery-3.6.1.min.js"></script>
+    <script src="/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/prod.js"></script>
+    <script type="text/javascript" src="/scorigami.js"></script>
+    <link rel="stylesheet" type="text/css" media="all" href="/scorigami.css" />
+</head>
+<body>
+<h1 align="center">NLL Scorigami</h1>
+<div id="content">
+    <p><a href="/about.html">What is NLL Scorigami?</a></p>
+    <p>Most recent scorigami: <span id="mostrecent"></span></p>
+    <div id="teamlist"></div>
+    <div id="legend" class="hidden"></div>
+    <div id="scorigami"></div>
+    <div id="infobox" class="hidden"></div>
+    <div id="optionsdiv">
+        <input class="firstoptioncheckbox" type="checkbox" id="counts" onclick="toggleCounts()"><label for="counts">Display counts</label>
+        <input class="optioncheckbox" type="checkbox" id="minigames" checked="checked" onclick="toggleMinigames()"><label for="minigames">Display minigames</label>
+        <input class="optioncheckbox" type="checkbox" id="regseason" checked="checked" onclick="toggleRegSeason()"><label for="regseason">Display regular season</label>
+        <input class="optioncheckbox" type="checkbox" id="playoffs" checked="checked" onclick="togglePlayoffs()"><label for="playoffs">Display playoffs</label>
+    </div>
+    <p id="status"></p>
+    <div id="gamelist"></div>
+</div>
+<footer id="lastupdated"></footer>
+
+<div id="statcounter"></div>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+jquery/**
+json/**
+live/**
+jest.config.js
+babel.config.js
+scorigami/jquery/**
+scorigami/json/**
+scorigami/live/**

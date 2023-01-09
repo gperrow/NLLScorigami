@@ -595,6 +595,8 @@ async function initData() {
     const files = [ 'games' ];
     let latestDate = null;
 
+    $.ajaxSetup({ cache: false }); // was having a problem getting cached data
+
     const loadFile = file => {
         if( _globalData.getData[file] ) {
             return;

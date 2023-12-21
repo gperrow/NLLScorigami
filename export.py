@@ -3,6 +3,7 @@ import sys,datetime
 
 c = iatest.Connection( 'uid=dba;pwd=sql' )
 
+print( 'Exporting data...' )
 curs = c.cursor()
 curs.execute( """select dateformat( G.dt, 'Mmm Dd, YYYY' ) as dt, G.winning_score, G.losing_score,
     replace( W.team, '[1]', '' ) as winner, replace( L.team, '[1]', '' ) as loser, G.minigame, G.playoffs, G.overtime,
@@ -16,6 +17,7 @@ rows = curs.fetchall()
 curs.close()
 c.close()
 
+print( 'Writing file...' )
 with open( 'json/games.json', 'w' ) as f:
     now = datetime.datetime.now().strftime( '%a %b %d, %Y %I:%M:%S %p EST' )
     f.write( '{\n"last_updated": "%s",\n"games": [\n' % now )
@@ -28,3 +30,4 @@ with open( 'json/games.json', 'w' ) as f:
     f.write( ',\n'.join( output ) )
     f.write( '\n]\n}\n' )
 #
+print( 'Done.' )

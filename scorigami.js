@@ -516,8 +516,36 @@ function handleGames( gamedata, options ) {
         `${recent_g.loser} ${recent_g.losing_score}`;
     $( '#mostrecent' ).html( mostrecent );
 
-    const lastupdated = `<p>Data last updated: ${_gamedata.sLatestDate}</p>`;
-    $( '#lastupdated' ).html( lastupdated );
+    const dt = new Date( _gamedata.sLatestDate );
+    let hrs = dt.getHours();
+    let ampm = 'AM';
+    if( hrs >= 12 ) {
+        if( hrs >= 13 ) {
+            hrs -= 12;
+        }
+        ampm = 'PM';
+    }
+    if( hrs === 0 ) {
+        hrs = 12;
+    }
+    hrs = `0${hrs}`.substr( -2 );
+    const min = `0${dt.getMinutes()}`.substr( -2 );
+
+    const sep = '&nbsp;&nbsp;&#9679;&nbsp;&nbsp;';
+    const thisYear = ( new Date() ).getYear() + 1900;
+    let copyright = `2022-${thisYear}`;
+    const footers = [
+        `Data updated on ${$.datepicker.formatDate( 'M d, yy', dt )} ${hrs}:${min} ${ampm}`,
+        `<a href="/about.html">About this site</a>`,
+        `All pages copyright &copy; ${copyright} Graeme Perrow`
+    ];
+    $( '#footertext' ).html( footers.join( sep ) );
+
+    $( '#greenLogo' ).html( `<!-- GreenGeeks Seal Code -->
+        <div><a href="#" onclick="ggs_ggseal()"><img src="https://static.greengeeks.com/ggseal/Green_15.png"></a>
+        <script>function ggs_ggseal(){window.open("https://my.greengeeks.com/seal/","_blank")}</script>
+        </div>
+        <!-- End GreenGeeks Seal Code -->` );
 
     showLegend();
 

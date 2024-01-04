@@ -106,15 +106,20 @@ td#vAxisLabel{
     writing-mode: tb-rl;
 }
 
-#lastupdated {
-    font-size: 12px;
-    padding: 0 0 20 10;
+#footer {
     background-color: #BBBBBB;
-    margin-top: 10px;
     width: 100%;
     position: fixed;
     bottom: 0;
+    padding: 0 0 20 10;
+    font-size: 0.8rem;
     height: 15px;
+}
+
+#greenLogo {
+    position: fixed;
+    bottom: 40px;
+    right: 5px;
 }
 
 .black {

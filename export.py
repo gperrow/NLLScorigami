@@ -1,7 +1,7 @@
-import iatest
+import sqlanydb
 import sys,datetime
 
-c = iatest.Connection( 'uid=dba;pwd=sql' )
+c = sqlanydb.connect( uid='dba', pwd='sql' )
 
 print( 'Exporting data...' )
 curs = c.cursor()

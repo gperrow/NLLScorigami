@@ -1,0 +1,21 @@
+#!/bin/sh
+rm -rf live
+mkdir live
+mkdir live/json
+mkdir live/jquery
+mkdir live/img
+
+echo Copying files...
+cp .htaccess live
+cp *.html live
+cp *.js live
+cp *.css live
+cp json/*.json live/json
+cp jquery/*.js live/jquery
+cp img/* live/img
+
+rm live/prod.js
+rm live/prod-live.js
+rm live/go.js
+
+cp prod-live.js live/prod.js

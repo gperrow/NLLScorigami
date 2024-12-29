@@ -10,7 +10,7 @@ app.use( express.static( '.', {
 /* eslint-disable-next-line no-unused-vars */
 app.use( function( req, res, next ) {
     res.set( 'Content-Type', 'text/html' );
-    res.send( Buffer.from( fs.readFileSync( './index.html' ) ) );
+    res.send( Buffer.from( fs.readFileSync( `${__dirname}/index.html` ) ) );
 });
 
 app.listen( 8001, function() {

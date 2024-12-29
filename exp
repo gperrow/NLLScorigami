@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "Exporting from database"
+. /Applications/SQLAnywhere17/System/bin64/sa_config.sh
+python export.py $*
